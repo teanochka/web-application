@@ -1,0 +1,13 @@
+train: dataset-yolo/train
+val: dataset-yolo/valid
+test: dataset-yolo/test
+
+nc: 7
+names: ['blue-container', 'green-container', 'mattress', 'orange-container', 'tire', 'trash', 'trash-bag']
+
+roboflow:
+  workspace: tulahack
+  project: ecology
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/tulahack/ecology/dataset/2

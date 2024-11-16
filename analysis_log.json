@@ -1,0 +1,69 @@
+[
+    {
+        "image_path": "output.jpg",
+        "is_landfill_prob": 0.003351404331624508,
+        "no_landfill_prob": 0.9966486096382141,
+        "detected_objects": [
+            "green-container",
+            "green-container"
+        ]
+    },
+    {
+        "image_path": "output.jpg",
+        "is_landfill_prob": 0.0005558435223065317,
+        "no_landfill_prob": 0.9994441866874695,
+        "detected_objects": [
+            "blue-container",
+            "blue-container"
+        ]
+    },
+    {
+        "image_path": "output.jpg",
+        "is_landfill_prob": 0.9323052167892456,
+        "no_landfill_prob": 0.0676947832107544,
+        "detected_objects": [
+            "blue-container",
+            "blue-container"
+        ]
+    },
+    {
+        "image_path": "output.jpg",
+        "is_landfill_prob": 0.4741500914096832,
+        "no_landfill_prob": 0.5258498787879944,
+        "detected_objects": [
+            "blue-container",
+            "blue-container",
+            "blue-container",
+            "trash-bag"
+        ]
+    },
+    {
+        "image_path": "output.jpg",
+        "is_landfill_prob": 0.9712235331535339,
+        "no_landfill_prob": 0.028776448220014572,
+        "detected_objects": [
+            "blue-container",
+            "blue-container",
+            "orange-container"
+        ]
+    },
+    {
+        "image_path": "output.jpg",
+        "is_landfill_prob": 0.0055367108434438705,
+        "no_landfill_prob": 0.9944632649421692,
+        "detected_objects": [
+            "orange-container",
+            "blue-container",
+            "blue-container"
+        ]
+    },
+    {
+        "image_path": "output.jpg",
+        "is_landfill_prob": 0.0007696262327954173,
+        "no_landfill_prob": 0.9992303848266602,
+        "detected_objects": [
+            "blue-container",
+            "blue-container"
+        ]
+    }
+]

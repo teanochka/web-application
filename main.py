@@ -1,53 +1,30 @@
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException
-from fastapi.responses import JSONResponse
-from pydantic import BaseModel
+from fastapi.responses import JSONResponse, HTMLResponse
 from typing import List
 import os
-import datetime
 import shutil
-from sqlalchemy import create_engine, Integer, Column, String, Float, DateTime, Boolean
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
 import model
+import json
 
-async def app(scope, receive, send):
-    assert scope['type'] == 'http'
-
-    await send({
-        'type': 'http.response.start',
-        'status': 200,
-        'headers': [
-            [b'content-type', b'text/plain'],
-        ],
-    })
-    await send({
-        'type': 'http.response.body',
-        'body': b'Hello, world!',
-    })
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-DATABASE_URL = "mysql+pymysql://username:password@localhost/dbname"
-engine = create_engine(DATABASE_URL)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base()
+# Подключение папки со статическими файлами
+app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/output", StaticFiles(directory="output"), name="output")
 
-class WasteDisposal(Base):
-    __tablename__ = "waste_disposals"
-    id = Column(Integer, primary_key=True, index=True)
-    location_lat = Column(Float, nullable=False)
-    location_lng = Column(Float, nullable=False)
-    disposal_date = Column(DateTime, default=datetime.datetime.utcnow)
-    landfill_detected = Column(Boolean, nullable=False)
-
-Base.metadata.create_all(bind=engine)
+@app.get("/", response_class=HTMLResponse)
+async def read_root():
+    # Возвращаем содержимое index.html
+    with open("static/index.html", "r", encoding="utf-8") as file:
+        html_content = file.read()
+    return HTMLResponse(content=html_content)
 
 # Маршрут для загрузки
 @app.post("/upload")
 async def upload_photos(
     photos: List[UploadFile] = File(...),
-    location_lat: float = Form(...),
-    location_lng: float = Form(...),
     confirm: bool = Form(...)
 ):
     if not confirm:
@@ -63,21 +40,40 @@ async def upload_photos(
             shutil.copyfileobj(photo.file, buffer)
         saved_files.append(file_path)
 
-    ai_results = model.process_images(saved_files)
-    landfill_detected = ai_results["landfill"]
-    cleanliness_score = ai_results["score"]
+    # Анализ каждого изображения
+    results = []
+    for file_path in saved_files:
+        analysis_result = model.analyze_image(file_path)
+        results.append({
+            "output_image_path": analysis_result["output_image_path"],
+            "is_landfill_prob": float(analysis_result["is_landfill_prob"]),
+            "no_landfill_prob": float(analysis_result["no_landfill_prob"]),
+            "detected_objects": analysis_result["detected_objects"],
+        })
 
-    # Сохранение данных в БД
-    db = SessionLocal()
-    disposal = WasteDisposal(
-        location_lat=location_lat,
-        location_lng=location_lng,
-        landfill_detected=landfill_detected
-    )
-    db.add(disposal)
-    db.commit()
+    log_dir = "./logs"
+    os.makedirs(log_dir, exist_ok=True)
 
-    return JSONResponse(content={
-        "output_images": ai_results["output_images"],
-        "cleanliness_score": cleanliness_score
-    })
+    log_file = os.path.join(log_dir, "analysis_log.json")
+
+    with open(log_file, "w", encoding="utf-8") as log:
+        json.dump(results, log, ensure_ascii=False, indent=4)
+
+    html_content = "<h1>Результаты анализа</h1>"
+    for result in results:
+        image_path = result["output_image_path"]
+        is_landfill = result["is_landfill_prob"]
+        no_landfill = result["no_landfill_prob"]
+
+        if is_landfill > no_landfill:
+            status = f"<p><b>Обнаружена свалка</b>, вероятность: {is_landfill:.2f}</p>"
+        else:
+            status = f"<p><b>Свалки не обнаружено</b>, вероятность: {no_landfill:.2f}</p>"
+
+        html_content += f"""
+        <div>
+            <img src="{image_path}" alt="Processed Image" style="width:300px;">
+            {status}
+        </div>
+        """
+    return HTMLResponse(content=html_content)

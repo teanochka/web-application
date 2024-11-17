@@ -70,6 +70,7 @@ async def upload_photos(
             "is_landfill_prob": float(analysis_result["is_landfill_prob"]),
             "no_landfill_prob": float(analysis_result["no_landfill_prob"]),
             "detected_objects": analysis_result["detected_objects"],
+            "containers_full": bool(analysis_result["containers_full"])
         })
 
     log_dir = "./logs"
@@ -88,7 +89,11 @@ async def upload_photos(
         image_path = result["output_image_path"]
         is_landfill = result["is_landfill_prob"]
         no_landfill = result["no_landfill_prob"]
+        container_full = result["containers_full"]
 
+        if container_full:
+            html_content += f"""<p>Контейнеры переполнены</p>"""   
+            
         if is_landfill > no_landfill:
             landfills_detected = True
             status = f"<p><b>Обнаружена свалка</b>, вероятность: {is_landfill:.2f}</p>"

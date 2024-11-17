@@ -1,0 +1,213 @@
+[
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.003351404331624508,
+        "no_landfill_prob": 0.9966486096382141,
+        "detected_objects": [
+            "green-container",
+            "green-container"
+        ],
+        "output_image_path": "output\\073100_jpg.rf.8bbf98cd3cf40186ed0768726bcf67d7-analysis.jpg",
+        "image_path": "uploads\\073100_jpg.rf.8bbf98cd3cf40186ed0768726bcf67d7.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.0005558435223065317,
+        "no_landfill_prob": 0.9994441866874695,
+        "detected_objects": [
+            "blue-container",
+            "blue-container"
+        ],
+        "output_image_path": "output\\074325_jpg.rf.a5410fb72a1847e71e6e80eee87555c5-analysis.jpg",
+        "image_path": "uploads\\074325_jpg.rf.a5410fb72a1847e71e6e80eee87555c5.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.9323052167892456,
+        "no_landfill_prob": 0.0676947832107544,
+        "detected_objects": [
+            "blue-container",
+            "blue-container"
+        ],
+        "output_image_path": "output\\075100_jpg.rf.1cf35a78f4bd7d3168a6de2a4e09cc02-analysis.jpg",
+        "image_path": "uploads\\075100_jpg.rf.1cf35a78f4bd7d3168a6de2a4e09cc02.jpg"
+    },
+    {
+        "containers_full": true,
+        "is_landfill_prob": 0.4741500914096832,
+        "no_landfill_prob": 0.5258498787879944,
+        "detected_objects": [
+            "blue-container",
+            "blue-container",
+            "blue-container",
+            "trash-bag"
+        ],
+        "output_image_path": "output\\075108_jpg.rf.99c600b00903afc5e9973a2336fa22cc-analysis.jpg",
+        "image_path": "uploads\\075108_jpg.rf.99c600b00903afc5e9973a2336fa22cc.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.9712235331535339,
+        "no_landfill_prob": 0.028776448220014572,
+        "detected_objects": [
+            "blue-container",
+            "blue-container",
+            "orange-container"
+        ],
+        "output_image_path": "output\\075300_jpg.rf.a1eb1730ea8f9bdeb01ff5806a2326e7-analysis.jpg",
+        "image_path": "uploads\\075300_jpg.rf.a1eb1730ea8f9bdeb01ff5806a2326e7.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.0055367108434438705,
+        "no_landfill_prob": 0.9944632649421692,
+        "detected_objects": [
+            "orange-container",
+            "blue-container",
+            "blue-container"
+        ],
+        "output_image_path": "output\\075500_jpg.rf.471279e9d76af538783f65dd3c7a169f-analysis.jpg",
+        "image_path": "uploads\\075500_jpg.rf.471279e9d76af538783f65dd3c7a169f.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.0007696262327954173,
+        "no_landfill_prob": 0.9992303848266602,
+        "detected_objects": [
+            "blue-container",
+            "blue-container"
+        ],
+        "output_image_path": "output\\075838_jpg.rf.a3279d3e72953dac5e4d530153c12c8a-analysis.jpg",
+        "image_path": "uploads\\075838_jpg.rf.a3279d3e72953dac5e4d530153c12c8a.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.9708224534988403,
+        "no_landfill_prob": 0.029177576303482056,
+        "detected_objects": [
+            "blue-container",
+            "green-container",
+            "trash",
+            "orange-container"
+        ],
+        "output_image_path": "output\\080031_jpg.rf.4cfc55544b1800125289b7dc7e1c5d0e-analysis.jpg",
+        "image_path": "uploads\\080031_jpg.rf.4cfc55544b1800125289b7dc7e1c5d0e.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.029174374416470528,
+        "no_landfill_prob": 0.9708256125450134,
+        "detected_objects": [
+            "orange-container",
+            "blue-container",
+            "blue-container"
+        ],
+        "output_image_path": "output\\080100_jpg.rf.5de13170ec87cca07e2597b7026b7125-analysis.jpg",
+        "image_path": "uploads\\080100_jpg.rf.5de13170ec87cca07e2597b7026b7125.jpg"
+    },
+    {
+        "containers_full": true,
+        "is_landfill_prob": 0.9950998425483704,
+        "no_landfill_prob": 0.004900166764855385,
+        "detected_objects": [
+            "orange-container",
+            "blue-container",
+            "green-container",
+            "trash",
+            "trash-bag",
+            "trash"
+        ],
+        "output_image_path": "output\\081236_jpg.rf.395918d5aa6dba6c09a7bc859c02145c-analysis.jpg",
+        "image_path": "uploads\\081236_jpg.rf.395918d5aa6dba6c09a7bc859c02145c.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.047967247664928436,
+        "no_landfill_prob": 0.952032744884491,
+        "detected_objects": [
+            "blue-container",
+            "green-container",
+            "orange-container"
+        ],
+        "output_image_path": "output\\081320_jpg.rf.162f605a0f35a060cffc5bb136452a4e-analysis.jpg",
+        "image_path": "uploads\\081320_jpg.rf.162f605a0f35a060cffc5bb136452a4e.jpg"
+    },
+    {
+        "containers_full": true,
+        "is_landfill_prob": 0.958729088306427,
+        "no_landfill_prob": 0.041270915418863297,
+        "detected_objects": [
+            "orange-container",
+            "blue-container",
+            "green-container",
+            "trash",
+            "trash",
+            "trash-bag",
+            "trash-bag",
+            "trash-bag",
+            "trash"
+        ],
+        "output_image_path": "output\\081507_jpg.rf.b8ac0d4c7369aee04bf46bb8dd3254eb-analysis.jpg",
+        "image_path": "uploads\\081507_jpg.rf.b8ac0d4c7369aee04bf46bb8dd3254eb.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.19205746054649353,
+        "no_landfill_prob": 0.8079425096511841,
+        "detected_objects": [
+            "blue-container",
+            "blue-container"
+        ],
+        "output_image_path": "output\\083200_jpg.rf.363000e8604a30d9835d6e7846648023-analysis.jpg",
+        "image_path": "uploads\\083200_jpg.rf.363000e8604a30d9835d6e7846648023.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.996694803237915,
+        "no_landfill_prob": 0.003305209567770362,
+        "detected_objects": [
+            "orange-container",
+            "green-container"
+        ],
+        "output_image_path": "output\\083600_jpg.rf.f94c5cca7d261cb75873b75213cbffef-analysis.jpg",
+        "image_path": "uploads\\083600_jpg.rf.f94c5cca7d261cb75873b75213cbffef.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.7277680039405823,
+        "no_landfill_prob": 0.2722319960594177,
+        "detected_objects": [
+            "green-container",
+            "orange-container",
+            "trash"
+        ],
+        "output_image_path": "output\\084854_jpg.rf.825f18eb5ff9565e77377e17c8729b39-analysis.jpg",
+        "image_path": "uploads\\084854_jpg.rf.825f18eb5ff9565e77377e17c8729b39.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.46940141916275024,
+        "no_landfill_prob": 0.530598521232605,
+        "detected_objects": [
+            "blue-container",
+            "orange-container",
+            "green-container",
+            "blue-container"
+        ],
+        "output_image_path": "output\\102800_jpg.rf.ff0d6749342360db26dc676fe805222c-analysis.jpg",
+        "image_path": "uploads\\102800_jpg.rf.ff0d6749342360db26dc676fe805222c.jpg"
+    },
+    {
+        "containers_full": false,
+        "is_landfill_prob": 0.24966581165790558,
+        "no_landfill_prob": 0.7503342032432556,
+        "detected_objects": [
+            "blue-container",
+            "blue-container",
+            "blue-container",
+            "blue-container"
+        ],
+        "output_image_path": "output\\112400_jpg.rf.bce4e54099e7147ca439b02d655e54d4-analysis.jpg",
+        "image_path": "uploads\\112400_jpg.rf.bce4e54099e7147ca439b02d655e54d4.jpg"
+    }
+]

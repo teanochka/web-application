@@ -1,21 +1,14 @@
 [
     {
-        "output_image_path": "output\\083600_jpg.rf.f94c5cca7d261cb75873b75213cbffef-analysis.jpg",
-        "is_landfill_prob": 0.996694803237915,
-        "no_landfill_prob": 0.003305209567770362,
+        "output_image_path": "output\\075108_jpg.rf.99c600b00903afc5e9973a2336fa22cc-analysis.jpg",
+        "is_landfill_prob": 0.4741500914096832,
+        "no_landfill_prob": 0.5258498787879944,
         "detected_objects": [
-            "orange-container",
-            "green-container"
-        ]
-    },
-    {
-        "output_image_path": "output\\084854_jpg.rf.825f18eb5ff9565e77377e17c8729b39-analysis.jpg",
-        "is_landfill_prob": 0.7277680039405823,
-        "no_landfill_prob": 0.2722319960594177,
-        "detected_objects": [
-            "green-container",
-            "orange-container",
-            "trash"
-        ]
+            "blue-container",
+            "blue-container",
+            "blue-container",
+            "trash-bag"
+        ],
+        "containers_full": true
     }
 ]

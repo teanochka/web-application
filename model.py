@@ -7,6 +7,7 @@ with open("coco.yaml", "r") as f:
     class_names = yaml.safe_load(f)["names"]
 
 def analyze_image(image_path):
+
     cls_model = YOLO("yolo11n-cls.pt")
     cls_model = YOLO("runs/classify/train2/weights/best.pt")
 
@@ -68,7 +69,6 @@ def analyze_image(image_path):
         "output_image_path": output_image_path,
     }
 
-# # Пример вызова функции
 # print(analyze_image(
 #     image_path="test-image.jpg",  # Путь к изображению
 # ))

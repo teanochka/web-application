@@ -8,7 +8,7 @@ import json
 import asyncpg
 from datetime import datetime
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from fastapi.staticfiles import StaticFiles
 
